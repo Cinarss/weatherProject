@@ -46,7 +46,7 @@ function renderWeather(data){
         </div>
 
         <div class="row mb-1">
-             <div class="col-4">Feelslike</div>
+             <div class="col-4">Wind Direction</div>
                 <div class="col-8"><svg version="1.1" id="katman_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="30px" height="30px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
                 <path fill="#DAE2E7" d="M20,0.35C9.15,0.35,0.35,9.15,0.35,20c0,10.85,8.8,19.65,19.65,19.65c10.85,0,19.65-8.801,19.65-19.65
@@ -57,12 +57,106 @@ function renderWeather(data){
         </div>
 
         <div class="row mb-1">
-             <div class="col-4">Humidity</div>
-             <div class="col-8">${data.current.humidity}</div>
+             <div class="col-4">Feelslike</div>
+             <div class="col-8">${data.current.feelslike_c}</div>
         </div>
+        
+
         </div>
+
+        </div>
+    `
+
+   
+
+    let days = `
+
+    <div class="col-md-4">
+                <div class="card text-center">
+                    <h4 class="card-title"><img src="${data.forecast.forecastday[0].day.condition.icon}"> ${data.forecast.forecastday[0].date }</h4>
+                    <div class="card-body">
+                        <div class="row">
+                            <h6 class="col-6">Avg Temperature</h6>
+                            <h5 class="col-6">${data.forecast.forecastday[0].day.avgtemp_c}</h5>
+                        </div>
+
+                        <div class="row">
+                            <h6 class="col-6">Avg Humiditye</h6>
+                            <h5 class="col-6">${data.forecast.forecastday[0].day.avghumidity}</h5>
+                        </div>
+
+                        <div class="row">
+                            <h6 class="col-6">Sunset</h6>
+                            <h6 class="col-6">${data.forecast.forecastday[0].astro.sunset}</h6>
+                        </div>
+
+                        <div class="row">
+                            <h6 class="col-6">Sunrise</h6>
+                            <h6 class="col-6">${data.forecast.forecastday[0].astro.sunrise}</h6>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <h4 class="card-title"><img src="${data.forecast.forecastday[1].day.condition.icon}"> ${data.forecast.forecastday[1].date }</h4>
+                    <div class="card-body ">
+                       <div class="row justify-content-start">
+                            <h6 class="col-6">Avg Temperature</h6>
+                            <h5 class="col-6">${data.forecast.forecastday[1].day.avgtemp_c}</h5>
+                        </div>
+
+                        <div class="row justify-content-start">
+                            <h6 class="col-6">Avg Humiditye</h6>
+                            <h5 class="col-6">${data.forecast.forecastday[1].day.avghumidity}</h5>
+                        </div>
+
+                       <div class="row justify-content-start">
+                            <h6 class="col-6">Sunset</h6>
+                            <h6 class="col-6">${data.forecast.forecastday[1].astro.sunset}</h6>
+                        </div>
+
+                        <div class="row justify-content-start">
+                            <h6 class="col-6">Sunrise</h6>
+                            <h6 class="col-6">${data.forecast.forecastday[1].astro.sunrise}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <h4 class="card-title"><img src="${data.forecast.forecastday[2].day.condition.icon}"> ${data.forecast.forecastday[2].date }</h4>
+                    <div class="card-body">
+                        <div class="row">
+                            <h6 class="col-6">Avg Temperature</h6>
+                            <h6 class="col-6">${data.forecast.forecastday[2].day.avgtemp_c}</h6>
+                        </div>
+
+                        <div class="row">
+                            <h6 class="col-6">Avg Humiditye</h6>
+                            <h5 class="col-6">${data.forecast.forecastday[2].day.avghumidity}</h5>
+                        </div>
+
+                        <div class="row">
+                            <h6 class="col-6">Sunset</h6>
+                            <h6 class="col-6">${data.forecast.forecastday[2].astro.sunset}</h6>
+                        </div>
+
+                        <div class="row">
+                            <h6 class="col-6">Sunrise</h6>
+                            <h6 class="col-6">${data.forecast.forecastday[2].astro.sunrise}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
     
     `
+
+    document.querySelector("#days").innerHTML = days;
     document.querySelector("#countryDetails").innerHTML = html;
 
 }
