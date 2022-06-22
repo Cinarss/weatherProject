@@ -76,55 +76,55 @@ function arrow(data){
         dir.classList = "w"
     }
 
-    else if(data.current.wind_dir ="E"){
+     if(data.current.wind_dir ="E"){
         dir.classList = "e";
     }
 
-    else if(data.current.wind_dir ="S"){
+     if(data.current.wind_dir ="S"){
         dir.classList = "s";
     }
 
-    else if(data.current.wind_dir ="N"){
+     if(data.current.wind_dir ="N"){
         dir.classList = "n";
     }
 
-    else if(data.current.wind_dir ="W"){
+     if(data.current.wind_dir ="W"){
         dir.classList = "w";
     }
 
-    else if(data.current.wind_dir ="WSW"){
+     if(data.current.wind_dir ="WSW"){
         dir.classList = "wsw";
     }
 
-    else if(data.current.wind_dir ="WNW"){
+     if(data.current.wind_dir ="WNW"){
         dir.classList = "wnw";
     }
 
-    else if(data.current.wind_dir ="ESH"){
+     if(data.current.wind_dir ="ESH"){
         dir.classList = "esh";
     }
 
-    else if(data.current.wind_dir ="ENH"){
+     if(data.current.wind_dir ="ENH"){
         dir.classList = "enh";
     }
 
-    else if(data.current.wind_dir ="NNH"){
+     if(data.current.wind_dir ="NNH"){
         dir.classList = "nnh";
     }
 
-    else if(data.current.wind_dir ="NNW"){
+     if(data.current.wind_dir ="NNW"){
         dir.classList = "nnw";
     }
 
-    else if(data.current.wind_dir ="ESH"){
+     if(data.current.wind_dir ="ESH"){
         dir.classList = "esh";
     }
 
-    else if(data.current.wind_dir ="SSW"){
+     if(data.current.wind_dir ="SSW"){
         dir.classList = "ssw";
     }
 
-    else if(data.current.wind_dir ="SSH"){
+     if(data.current.wind_dir ="SSH"){
         dir.classList = "ssh";
     }
 
