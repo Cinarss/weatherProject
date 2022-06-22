@@ -70,7 +70,63 @@ function renderWeather(data){
 
 
 function arrow(data){
-    if(data.current.wind_dir == "WSW"){
-        document.querySelector("#katman_1").classList = "wsw"
+    let dir = document.querySelector("#katman_1")
+
+    if(data.current.wind_dir == "W"){
+        dir.classList = "w"
     }
+
+    else if(data.current.wind_dir ="E"){
+        dir.classList = "e";
+    }
+
+    else if(data.current.wind_dir ="S"){
+        dir.classList = "s";
+    }
+
+    else if(data.current.wind_dir ="N"){
+        dir.classList = "n";
+    }
+
+    else if(data.current.wind_dir ="W"){
+        dir.classList = "w";
+    }
+
+    else if(data.current.wind_dir ="WSW"){
+        dir.classList = "wsw";
+    }
+
+    else if(data.current.wind_dir ="WNW"){
+        dir.classList = "wnw";
+    }
+
+    else if(data.current.wind_dir ="ESH"){
+        dir.classList = "esh";
+    }
+
+    else if(data.current.wind_dir ="ENH"){
+        dir.classList = "enh";
+    }
+
+    else if(data.current.wind_dir ="NNH"){
+        dir.classList = "nnh";
+    }
+
+    else if(data.current.wind_dir ="NNW"){
+        dir.classList = "nnw";
+    }
+
+    else if(data.current.wind_dir ="ESH"){
+        dir.classList = "esh";
+    }
+
+    else if(data.current.wind_dir ="SSW"){
+        dir.classList = "ssw";
+    }
+
+    else if(data.current.wind_dir ="SSH"){
+        dir.classList = "ssh";
+    }
+
+    
 }

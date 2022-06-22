@@ -1,4 +1,50 @@
 
+
+.n{
+    transform: rotate(180deg);
+}
+
+.e{
+    transform: rotate(270deg);
+}
+
+.s{
+    transform: rotate(360deg);
+}
+
+.w{
+    transform: rotate(90deg);
+}
+
+.ssw{
+    transform: rotate(61deg);
+}
+
+.ssh{
+    transform: rotate(300deg);
+}
+
+.wnw{
+    transform: rotate(135deg);
+}
+
 .wsw{
     transform: rotate(61deg);
+}
+
+
+.nnw{
+    transform: rotate(135deg);
+}
+
+.nnh{
+    transform: rotate(216deg);
+}
+
+.enh{
+    transform: rotate(216deg);
+}
+
+.esh{
+    transform: rotate(300deg);
 }
