@@ -1,50 +1,37 @@
 
 
 .n{
-    transform: rotate(180deg);
+    transform: rotate(180deg);/*kuzey*/
 }
 
 .e{
-    transform: rotate(270deg);
+    transform: rotate(270deg); /*doğu*/
 }
 
 .s{
-    transform: rotate(360deg);
+    transform: rotate(360deg); /*güney*/
 }
+
 
 .w{
-    transform: rotate(90deg);
-}
-
-.ssw{
-    transform: rotate(61deg);
-}
-
-.ssh{
-    transform: rotate(300deg);
-}
-
-.wnw{
-    transform: rotate(135deg);
-}
-
-.wsw{
-    transform: rotate(61deg);
+    transform: rotate(90deg); /*batı*/
 }
 
 
-.nnw{
-    transform: rotate(135deg);
+
+
+.ne{
+    transform: rotate(215deg); /*kuzeyDoğu*/
 }
 
-.nnh{
-    transform: rotate(216deg);
+.se{
+    transform: rotate(310deg); /*güneyDoğu*/
 }
 
-.enh{
-    transform: rotate(216deg);
+.sw{
+    transform: rotate(50deg); /*güneyBatı*/
 }
 
-.esh{
-    transform: rotate(300deg);
+.nw{
+    transform: rotate(140deg); /*kuzeyBatı*/
 }

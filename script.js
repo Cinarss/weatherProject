@@ -63,7 +63,6 @@ function renderWeather(data){
         </div>
     
     `
-    console.log("pley")
     document.querySelector("#countryDetails").innerHTML = html;
 
 }
@@ -76,57 +75,41 @@ function arrow(data){
         dir.classList = "w"
     }
 
-     if(data.current.wind_dir ="E"){
+    else if(data.current.wind_dir == "E"){
         dir.classList = "e";
     }
 
-     if(data.current.wind_dir ="S"){
+    else if(data.current.wind_dir =="S"){
         dir.classList = "s";
     }
 
-     if(data.current.wind_dir ="N"){
+    else if(data.current.wind_dir == "N"){
         dir.classList = "n";
     }
 
-     if(data.current.wind_dir ="W"){
+    else if(data.current.wind_dir == "W"){
         dir.classList = "w";
     }
 
-     if(data.current.wind_dir ="WSW"){
-        dir.classList = "wsw";
+    else if(data.current.wind_dir == "NNE" || data.current.wind_dir == "ENE" || data.current.wind_dir == "NE"){ // kuzeyDoğu
+        dir.classList = "ne";
     }
 
-     if(data.current.wind_dir ="WNW"){
-        dir.classList = "wnw";
+    else if(data.current.wind_dir == "SSE" || data.current.wind_dir == "ESE" || data.current.wind_dir == "SE"){ // güneyDoğu
+        dir.classList = "se";
     }
 
-     if(data.current.wind_dir ="ESH"){
-        dir.classList = "esh";
+    else if(data.current.wind_dir == "SSW" || data.current.wind_dir == "WSW" || data.current.wind_dir == "SW"){ // güneyBatı
+        dir.classList = "sw";
     }
 
-     if(data.current.wind_dir ="ENH"){
-        dir.classList = "enh";
+    else if(data.current.wind_dir == "WNW" || data.current.wind_dir == "NNW" || data.current.wind_dir == "NW"){ // kuzeyBatı
+        dir.classList = "nw";
     }
 
-     if(data.current.wind_dir ="NNH"){
-        dir.classList = "nnh";
-    }
+    
 
-     if(data.current.wind_dir ="NNW"){
-        dir.classList = "nnw";
-    }
-
-     if(data.current.wind_dir ="ESH"){
-        dir.classList = "esh";
-    }
-
-     if(data.current.wind_dir ="SSW"){
-        dir.classList = "ssw";
-    }
-
-     if(data.current.wind_dir ="SSH"){
-        dir.classList = "ssh";
-    }
+    
 
     
 }
