@@ -7,21 +7,36 @@ document.querySelector("#btnSearch").addEventListener("click", () =>{
 
 
 async function getWeather(name){
+    try{
+
     const apiKey = "40c844aeb7b348af8cd95840222206";
     const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${name}&days=10&aqi=yes&alerts=yes`
     
     const response = await fetch(url);
     const data = await response.json();
     newData = [data];
+    
+    if(!response.ok)
+    throw new Error("The result you were looking for were not found.");
     renderWeather(newData[0]);
     arrow(newData[0]);
+
+    
+    
+    
     console.log(newData);
     console.log(typeof newData)
+}
+
+    catch(err){
+        renderError(err);
+    }
 }
 
 
 function renderWeather(data){
     document.querySelector("#countryDetails").innerHTML = "";
+    document.querySelector("#days").innerHTML = "";
 
     let html = `
         <div class="col-4">
@@ -203,7 +218,17 @@ function arrow(data){
 
     
 
-    
+}
 
-    
+
+function renderError(err){
+    const html = `
+    <div class="alert alert-danger">
+        ${err.message}
+    </div>
+    `;
+    setTimeout(function(){
+        document.querySelector("#errors").innerHTML = "";
+    },3000);
+    document.querySelector("#errors").innerHTML = html;
 }
